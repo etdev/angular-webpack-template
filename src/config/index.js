@@ -1,21 +1,20 @@
-// global config
 const baseUrl = 'http://localhost:3000/v1/';
 
+// setup, config
 export default function(myApp) {
-  myApp.run(function($rootScope) {
+  // restangular init
+  require("./restangular")(myApp, baseUrl);
+
+  // menu init
+  require("./menu")(myApp);
+
+  // environment setup
+  myApp.run(function($rootScope, $document) {
     $rootScope.config = {
       "env": "development" // add logic to determine this
     };
+
   });
 
-  myApp.config(function(RestangularProvider) {
-    // set base path for API
-    RestangularProvider.setBaseUrl(baseUrl);
-
-    // format responses with paging metadata
-    RestangularProvider.addResponseInterceptor(function(data, operation, what, url, response, deferred) {
-      // set response interceptor
-    });
-  });
 }
 

@@ -6,7 +6,7 @@ Complete template for front-end development
 * AngularJS 1
   * Restangular
   * ngRoute
-* Sass
+* Sass (via node-sass)
 * Bourbon
 * Neat
 * Normalize.css
@@ -16,3 +16,4 @@ Complete template for front-end development
 * Underscore
 * Fontawesome
 * Raleway, Open Sans, Montseratt Google fonts
+* slim/SLM template support
