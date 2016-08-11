@@ -9,11 +9,8 @@ export default function(myApp) {
   require("./menu")(myApp);
 
   // environment setup
-  myApp.run(function($rootScope, $document) {
-    $rootScope.config = {
-      "env": "development" // add logic to determine this
-    };
-
+  myApp.run(function($rootScope) {
+    $rootScope.config = require("./data.yml");
   });
 
 }

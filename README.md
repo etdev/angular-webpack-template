@@ -17,3 +17,21 @@ Complete template for front-end development
 * Fontawesome
 * Raleway, Open Sans, Montseratt Google fonts
 * slim/SLM template support
+
+### Usage
+Install node and npm if you don't have them.
+
+Install node modules
+```
+make install
+```
+
+Run via the webpack dev server
+```
+make run
+```
+
+Build files and store in the `build` directory
+```
+make build
+```
