@@ -1,0 +1,20 @@
+<div class="container-fluid">
+  <div id="wrapper">
+    <div id="page-wrapper">
+      <section class="restaurant-main" style="background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url({{ restaurant.thumbnail }});">
+        <h2> {{ restaurant.name }} </h2>
+      </section>
+      <section>
+        <ul class="item-label-val-list">
+          <li> Name: {{ restaurant.name }} </li>
+          <li> More info: <a href="{{ restaurant.url }}">Tabelog</a> </li>
+          <li> Rating: {{ restaurant.rating }} </li>
+          <li> Price Range (lower is cheaper): {{ restaurant.price_range }} </li>
+          <li> Cuisine: {{ restaurant.genres }} </li>
+        </ul>
+      </section>
+    </div>
+
+    <div id="loader"></div>
+  </div> <!-- wrapper -->
+</div>

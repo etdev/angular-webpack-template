@@ -1,0 +1,11 @@
+<li ng-repeat="area in areas" class="col-md-4">
+  <a href="#/areas/{{area.id}}">
+    <section class="item-thumbnail" style="background-image: url({{area.thumbnail}});"></section>
+    <section class="item-info">
+      <div class="main-title"> {{ area.english_name }}</div>
+      <div class="sub-title">
+        <span> {{ area.name }} </span> <span> ({{ area.restaurants_count }}) </span>
+      </div>
+    </section>
+  </a>
+</li>

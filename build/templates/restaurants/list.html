@@ -1,0 +1,20 @@
+<li ng-repeat="restaurant in restaurants" class="col-md-4">
+  <a href="#/restaurants/{{restaurant.id}}">
+    <section class="item-thumbnail" style="background-image: url({{ restaurant.thumbnail }});"></section>
+    <section class="item-info" data-item-type="restaurant">
+      <div class="main-title"> {{ restaurant.name }}</div>
+      <div class="sub-title">
+        <div class="rating">
+          <i class="fa fa-signal"></i>
+          <span>{{ restaurant.rating }}</span>
+        </div>
+        <div class="price-range">
+          <i ng-repeat="t in restaurant.price_range_arr track by $index" class="fa fa-yen"></i>
+        </div>
+        <div class="genres">
+          <span>{{ restaurant.genres }}</span>
+        </div>
+      </div>
+    </section>
+  </a>
+</li>
