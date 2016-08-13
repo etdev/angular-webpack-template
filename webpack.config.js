@@ -13,6 +13,8 @@ var sassNeatPaths = require("node-neat").with([
     return "includePaths[]=" + neatPath;
 }).join("&");
 
+var nodeNormalizePaths = require("node-normalize-scss").includePaths;
+
 module.exports = {
     entry: ["./src/main.js", "./assets/styles/main.scss"],
     output: {
@@ -26,7 +28,7 @@ module.exports = {
             { test: /\.jsx?$/, exclude: /(node_modules|bower_components)/, loader: 'babel' },
             { test: /\.html$/, loaders: ["html"] },
             { test: /\.css$/, loader: ExtractTextPlugin.extract('css') },
-            { test: /\.scss$/, loader: ExtractTextPlugin.extract('css?sourceMap!sass?sourceMap&' + sassNeatPaths) },
+            { test: /\.scss$/, loader: ExtractTextPlugin.extract('css?sourceMap!sass?sourceMap&' + sassNeatPaths + '&' + nodeNormalizePaths) },
             { test: /\.jpg$/, loader: "file?name=images/[name].[ext]" },
             { test: /\.png$/, loader: "file?name=images/[name].[ext]" },
             { test: /\.html\.(slm|slim)$/, loader: ngTemplateLoader },

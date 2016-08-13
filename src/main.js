@@ -1,5 +1,5 @@
 // require files
-import 'normalize-css';
+import normalize from 'node-normalize-scss';
 import 'font-awesome-webpack';
 import '../assets/styles/main.scss'
 import $ from 'jquery';
