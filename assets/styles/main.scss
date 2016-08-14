@@ -1,8 +1,9 @@
 // import font-awesome via webpack
+@import "bourbon";
+@import "grid_settings";
+@import "neat";
 @import 'variables';
 @import 'mixins';
-@import "bourbon";
-@import "neat";
 
 // web fonts
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,500,700');
@@ -27,6 +28,7 @@
 
 // layout
 @import 'layout/header';
+@import 'layout/card';
 @import 'layout/menu';
 @import 'layout/banner';
 @import 'layout/main';

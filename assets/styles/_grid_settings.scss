@@ -1,0 +1,9 @@
+@import "neat-helpers";
+$visual-grid: true;
+// Define your breakpoints
+$xs: new-breakpoint(min-width 375px 1);
+$sm: new-breakpoint(max-width 480px 4);
+$md: new-breakpoint(max-width 480px 4);
+$lg: new-breakpoint(max-width 480px 4);
+$xl: new-breakpoint(max-width 480px 4);
+

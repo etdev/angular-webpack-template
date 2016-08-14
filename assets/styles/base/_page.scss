@@ -1,15 +1,12 @@
 // page
-body {
-  @include default-font-family;
-  background-image:
-    url("https://s3-ap-northeast-1.amazonaws.com/tokyo-restaurants/overlay.png"),
-    url("https://s3-ap-northeast-1.amazonaws.com/tokyo-restaurants/home_bg_main.jpg");
-  background-size: cover;
-  color: #fff;
-}
-
 html, body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+body {
+  @include default-font-family;
+  @include outer-container;
+  background-color: #f7f7f7;
 }
